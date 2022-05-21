@@ -25,6 +25,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val navView: BottomNavigationView = findViewById(R.id.bnvMenu)
+        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+        navigateTo(navView.menu.findItem(R.id.menu_home))
+    }
+
     private val onNavigationItemSelectedListener = BottomNavigationView.
     OnNavigationItemSelectedListener { item -> navigateTo(item) }
 
@@ -42,14 +51,5 @@ class MainActivity : AppCompatActivity() {
             R.id.menu_favourite -> SaveFragment()
             else -> TeamFragment()
         }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val navView: BottomNavigationView = findViewById(R.id.bnvMenu)
-        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-        navigateTo(navView.menu.findItem(R.id.menu_home))
     }
 }

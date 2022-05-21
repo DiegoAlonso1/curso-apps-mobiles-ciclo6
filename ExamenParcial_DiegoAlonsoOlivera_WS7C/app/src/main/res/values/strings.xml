@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExamenParcial_DiegoAlonsoOlivera_WS7C</string>
+    <string name="title">MyAlbums</string>
+    <string name="detail">Detalle</string>
+    <string name="list">Lista</string>
+    <string name="search">Buscar</string>
+    <string name="item_id">id</string>
+    <string name="item_userId">userId</string>
+    <string name="item_title">title</string>
+</resources>
